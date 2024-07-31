@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import AdminLayout from './admin/AdminLayout';
+import Login from './admin/Login/Login';
+import Dashboard from './admin/Dashboard/Dashboard';
+import { Home } from '@mui/icons-material';
+import BlogList from './admin/BlogList/BlogList';
+import AddNewBlog from './admin/AddBlog/AddNewBlog';
+import CategoryList from './admin/CategoryList/CategoryList';
+import AddCategory from './admin/AddCategory/AddCategory';
+import CommentList from './admin/CommentList/CommentList';
+const router=createBrowserRouter([
+  {path:'admin',element:<AdminLayout/>,children:[
+    {path:'login',element:<Login/>},
+    {path:'dashboard',element:<Dashboard/>,children:[
+      {path:'',element:<Home/>},
+      {path:'blog',element:<BlogList/>},
+      {path:'addblog',element:<AddNewBlog key="addblog" mode="addblog"/>},
+      {path:'category',element:<CategoryList/>},
+      {path:'addcategory',element:<AddCategory key="add"  mode="add"/>},
+      {path:'comment',element:<CommentList/>},
+      {path:'editcategory',element:<AddCategory key="edit" mode="edit"/>},
+      {path:'editblog',element:<AddNewBlog key="editblog" mode="editblog"/>}
+
+    ]}
+  ]}
+
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <RouterProvider router={router}></RouterProvider>
+      
+    </>
   );
 }
 

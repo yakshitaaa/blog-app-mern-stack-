@@ -1,0 +1,38 @@
+.card
+{
+   display: flex;
+   margin-top: 10px;
+   background-color: white;
+   padding: 5px;
+   padding-left: 20px;
+   padding-right: 20px;
+   align-items: center;
+   justify-content: space-between;
+   width:  70%;
+   box-shadow: 5px 5px 5px black;
+   border-radius: 10px;
+
+}
+
+/* .card:hover{
+    background-color: rosybrown;
+    cursor: pointer;
+    transition: 0.5s;
+} */
+
+
+.cat-image
+{
+    /* border-radius: 50%; */
+    margin-left: 30px;
+}
+
+.smBtn{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 80px;
+    cursor: pointer;
+    background-color:rgb(241, 194, 36);
+ 
+}

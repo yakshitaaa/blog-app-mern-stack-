@@ -1,0 +1,20 @@
+.cat-container{
+    /* height: 100vh;  isse scroll bar aane lgega bemtlb ka */
+    width: 100%;
+}
+
+.cat-form{
+    width: 40%;
+}
+
+.submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    border:none;
+    outline:none;
+    padding: 10px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgb(23, 6, 172);
+    color: white;
+}

@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.loginContainer{
+    height: 100vh;
+    width:100%;
+    background-color: #212837;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox
+{
+    
+    width: 40%;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+ 
+    padding: 5px;
+    margin: 5px;
+    height: 30px;
+    width: 100%;
+    border: none;
+    outline: line;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+button{
+    width: 80%;
+    padding: 5px;
+
+}
+
+.submitbtn{
+    background-color: rgb(23, 6, 172);
+    height: 45px;
+     color: white;
+     width: 100%;
+}
+
+.image{
+    height: 10%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+
+/* phone view me layout sahi rkhne k liye */
+@media screen and (max-width:700px) {    
+    .loginBox
+    {
+        width: 90%;
+    }
+    
+}
